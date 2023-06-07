@@ -1,6 +1,6 @@
-import { Fragment, Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 
-const LazyFragment = lazy(() => Promise.resolve({ default: Fragment }));
+const LazyFragment = lazy(() => import("./LazyFragment"));
 
 function App() {
   return (
